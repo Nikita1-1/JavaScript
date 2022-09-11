@@ -24,3 +24,9 @@ document.write(Multiply);
 
 
 
+function displayDate() {
+    document.getElementById("demo").innerHTML = Date();
+}
+
+
+
