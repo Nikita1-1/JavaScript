@@ -19,7 +19,7 @@ document.write(Cat)
 
 
 
-var Multiply = 4 * 8;
+var Multiply = 4 * 8; // expression
 document.write(Multiply);
 
 
