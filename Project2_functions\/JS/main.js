@@ -111,3 +111,14 @@ console.log(pow);
 let sqrt = Math.sqrt( 110);//eturns the square root of x
 console.log(sqrt);
 
+function my_Dictionary() {
+   const Animal = {
+      Species: "Dog",
+      Breed: "Labrador",
+      Color: "Silver",
+      Age: 4,
+      Sound: "Bark!"
+   };
+   delete Animal.Sound;
+   document.getElementById('Dictionary').innerHTML = Animal.Sound;
+}
