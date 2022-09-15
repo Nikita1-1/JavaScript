@@ -15,14 +15,14 @@ function myFunction() {
 
 
 
-function fruit(color, taste, seeds){
+function fruit(color, taste, seeds){//using this function with keyword THIS and NEW 
     this.Fruit_color = color;
     this.Fruit_taste = taste;
     this.Fruit_seeds = seeds;
 
 } 
 
-var banana = new fruit("Yellow", "Sweet", "Soft seeds");
+var banana = new fruit("Yellow", "Sweet", "Soft seeds");//creating NEW fruit and giving him own values.
 function myFruits(){
     document.getElementById("Fruit").innerHTML = "All bananas have " + banana.Fruit_color + " color, and " + banana.Fruit_taste + " taste " + " and inside of it you can find " + banana.Fruit_seeds;
 }
@@ -41,12 +41,12 @@ document.getElementById("class").innerHTML = "This is a new Student " + highScho
 
 
 
-function count_Function(){
+function count_Function(){//nested function is function inside the function . First function return the whole result in HTML
     document.getElementById("Counting").innerHTML = Count();
-    function Count(){
+    function Count(){// this function is counting from start point to + 1
         let Starting_Point = 8;
         function Plus_One(){ Starting_Point += 1;}
         Plus_One();
-        return Starting_Point;
+        return Starting_Point;//returning result 9 
     }
 }
