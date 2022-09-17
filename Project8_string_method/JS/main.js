@@ -41,7 +41,7 @@ let apple = smth.valueOf();//valueOf takes value from variable that you point to
 document.write(apple);
 
 
-let num = 4.5567;
+let num = 4.5567;//converts a number to a string, rounded to a specified number of decimals
 let n = num.toFixed();
 document.write(n);
 
