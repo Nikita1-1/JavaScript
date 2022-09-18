@@ -14,3 +14,5 @@ function countdown() {
     tick();
 }
 
+
+alert(document.getElementById("async").innerHTML);
