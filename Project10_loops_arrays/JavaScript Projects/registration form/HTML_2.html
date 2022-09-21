@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Contact Form</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Registration Form</h1>
+            <form id = "info" onsubmit= "return validateForm()" name="Registration" action="/" method ="post">
+                <br>
+                <h6> First Name: </h6>
+                <input id="fname" type="text" name="fname" placeholder="First Name">
+                <div id="error"></div>
+                <br>
+                <h6>Last Name:</h6>
+                <input id = "lname" type="text" name="lname" placeholder="Last Name">
+                <div id="error_2"></div>
+                <!-- <div class="error"></div> -->
+                <br>
+                <h6>Email Address:</h6>
+                <input id="email" type="email" name="Email" placeholder="Email"  required>
+                <!-- <div class="error"></div> -->
+                    
+                <button class="Submit" type="submit" value="Submit">Submit</button>
+            </form>
+    </div>
+
+    <script src="JS/main.js" defer></script>
+</body>
+</html>
