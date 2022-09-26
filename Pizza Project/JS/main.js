@@ -6,7 +6,7 @@ function getReceipt() {
     let sizeArray = document.getElementsByClassName('size');
     for (let i = 0; i < sizeArray.length; i++){
         if (sizeArray[i].checked) {
-            let selectedSize = sizeArray[i].value;
+            var selectedSize = sizeArray[i].value;
             text1 = text1 + selectedSize + '<br>';
         }
     }
@@ -29,9 +29,9 @@ function getReceipt() {
     getTopping(runningTotal, text1);
 };
 
-function getTooping(runningTotal, text1) {
+function getTopping(runningTotal, text1) {
     let toppingTotal = 0;
-    let selectedTopping = [];
+    var selectedTopping = [];
     let toppingArray = document.getElementsByClassName('toppings');
     for (let j = 0; j < toppingArray.length; j++) {
         if (toppingArray[j].checked) {
@@ -42,45 +42,54 @@ function getTooping(runningTotal, text1) {
     }
     let toppingCount = selectedTopping.length;
     if (toppingCount > 1) {
-        topping = (toppingCount - 1);
+        toppingTotal = (toppingCount + 2);
     } else {
         toppingTotal = 0;
     }
+
+    // selectedTopping = 5;
+    // for(let f = 5; f < selectedTopping.length; f++){
+    //     if (selectedTopping[j].checked) {
+    //         selectedTopping.push()
+    //     }
+    // }
+
+
+    runningTotal = (runningTotal + toppingTotal);
+    console.log('total topping items: ' + toppingCount);
+    console.log(toppingCount + ' topping - 1 free topping = ' + " $ " + toppingTotal + '.00');
+    console.log('topping text1: ' + text1);
+    console.log('Purchase Total: ' + " $ " + runningTotal + '.00' );
+    document.getElementById('showText').innerHTML = text1;
+    document.getElementById('totalPrice').innerHTML = '<h3> Total: <strong>$ ' + runningTotal + '.00 ' + '</strong></h3>';
+
 };
-//     runningTotal = (runningTotal + toppingTotal);
-//     console.log('total topping items: ' + toppingCount);
+
+// function getVeggi(runningTotal, text1) {
+//     getTopping();
+//     let veggiTotal = 0;
+//     let selectedVeggi = [];
+//     let veggiArray = document.getElementsByClassName('Veggi');
+//     for (let z = 0; z < veggiArray.length; z++) {
+//         if(veggiArray[z].checked) {
+//             selectedVeggi.push(veggiArray[z].value);
+//             console.log('selected veggi item: ('+ selectedVeggi[z].value +')');
+//             text1= text1 + veggiArray[z].value + '<br>';
+//         }
+//     }
+//     let veggiCount = selectedVeggi.length;
+//     if(veggiCount > 1) {
+//         veggi = (veggiCount - 1);
+//     } else {
+//         veggiTotal = 0;
+//     }
+//     runningTotal = (runningTotal + veggiTotal);
+//     console.log('total veggi items: ' + veggiTotal);
+//     console.log('total toppings: ' + toppingCount);
 //     console.log(toppingCount + ' topping - 1 free topping = ' + " $ " + toppingTotal + '.00');
-//     console.log('topping text1: ' + text1);
+//     console.log(veggiTotal + 'veggi - 1 free veggi = ' + ' $ ' + veggiTotal + '.00');
+//     console.log("veggi text1:" + text1);
 //     console.log('Purchase Total: ' + " $ " + runningTotal + '.00' );
 //     document.getElementById('showText').innerHTML = text1;
 //     document.getElementById('totalPrice').innerHTML = '<h3> Total: <strong>$ ' + coutingTotal + '.00 ' + '</strong></h3>';
-// };
-
-function getVeggi(runningTotal, text1) {
-    getTopping();
-    let veggiTotal = 0;
-    let selectedVeggi = [];
-    let veggiArray = document.getElementsByClassName('Veggi');
-    for (let z = 0; z < veggiArray.length; z++) {
-        if(veggiArray[z].checked) {
-            selectedVeggi.push(veggiArray[z].value);
-            console.log('selected veggi item: ('+ selectedVeggi[z].value +')');
-            text1= text1 + veggiArray[z].value + '<br>';
-        }
-    }
-    let veggiCount = selectedVeggi.length;
-    if(veggiCount > 1) {
-        veggi = (veggiCount - 1);
-    } else {
-        veggiTotal = 0;
-    }
-    runningTotal = (runningTotal + veggiTotal);
-    console.log('total veggi items: ' + veggiTotal);
-    console.log('total toppings: ' + toppingCount);
-    console.log(toppingCount + ' topping - 1 free topping = ' + " $ " + toppingTotal + '.00');
-    console.log(veggiTotal + 'veggi - 1 free veggi = ' + ' $ ' + veggiTotal + '.00');
-    console.log("veggi text1:" + text1);
-    console.log('Purchase Total: ' + " $ " + runningTotal + '.00' );
-    document.getElementById('showText').innerHTML = text1;
-    document.getElementById('totalPrice').innerHTML = '<h3> Total: <strong>$ ' + coutingTotal + '.00 ' + '</strong></h3>';
-}
+// }
