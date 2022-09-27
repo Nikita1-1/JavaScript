@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <p>Create a button element</p>
+
+    <div id="myDiv" style="padding: 90px; background-color:aqua;" onmouseover = "this.innerHTML += '+';"></div>
+
+    <p><button onclick="myFunction(event)"> Simulate Mousse over</button></p>
+
+<script>
+    const btn = document.createElement('button');
+    btn.innerHTML = 'Click Me';
+    document.body.appendChild(btn);
+
+    function myFunction(event){
+        const ev = document.createEvent('MouseEvent');
+        ev.initMouseEvent('mouseover', true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+        document.getElementById("myDiv").dispatchEvent(ev);
+    }
+</script>
+</body>
+</html>
