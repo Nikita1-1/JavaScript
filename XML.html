@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML</title>
+</head>
+<body>
+    
+<p id="XML_Example"></p>
+    <script>
+        var XML_Parser, XML_Document;
+
+        //create a text string
+        var Skiff_Boat = "<skiff_boat>" +
+            "<producer> Empacher </producer>" +
+            "<type> single scull </type>" +
+            "<color> Mint </color>" +
+            "<weight> 15kg <weight>" +
+            "<year> 2023 </year>" +
+            "</skiff_boat>";
+
+            //creating XML DOM parser
+
+            XML_Parser = new DOMParser();//New Creates a new object  “DOMParser” is used to create a DOM object from an XML string.
+            //creating a new XML DOM object using the text string
+            XML_Document = XML_Parser.parseFromString(Skiff_Boat,"text/xml");//cretes XML object from string 
+            
+            //getElementsByTagName() method returns a collection of elements using a tag name.
+            document.getElementById("XML_Example").innerHTML =
+            XML_Document.getElementsByTagName("color")[0].childNodes[0].nodeValue;
+    </script>
+</body>
+</html>

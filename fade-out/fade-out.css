@@ -1,0 +1,15 @@
+body{
+opacity: 0;
+transition: 1s opacity;
+width: 100vh;
+height: 100vh;
+}
+
+body.fade-out{
+opacity:0;
+transition:none ;
+}
+
+html{
+background-color: green;
+}

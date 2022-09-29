@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React_2</title>
+</head>
+<body>
+    
+    <div id="like_button_container"></div>
+
+    <script>
+        const X = React.createElement;
+
+        class likeButton extends React.Component {
+            constructor(props) {//A constructor creates an object within a class
+                super(props);//  “Props” is short for properties.“Super” calls a constructor
+                this.state = { liked: false }; 
+            }
+
+            render() {
+                if(this.state.liked) {
+                    return 'You clicked the like button!';
+                }
+
+                return X (
+                    'button',// why is it button?? 
+                    { onClick : () => this.setState({ liked: true}) },//“setstate” schedules a UI update
+                    'Like'
+                );
+            }
+        }
+
+        const domContainer = document.querySelector('#like_button_container');
+        ReactDOM.render(X(likeButton), domContainer);
+    </script>
+
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+</body>
+</html>
