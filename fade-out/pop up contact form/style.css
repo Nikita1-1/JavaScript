@@ -2,16 +2,17 @@
     box-sizing: border-box;
 }
 
-.open_button{
+#open_button{
     position: fixed;
     opacity: 0.8;
     bottom: 23px;
-    width: 290px;
+    width: 280px;
     color: white;
     border: none;
     background-color: #555;
     padding: 16px 20px;
     cursor: pointer;
+    right:28px
 }
 
 .popup{
@@ -27,7 +28,7 @@
     max-width:300px;
     padding: 10px;
     background-color: white;
-    animation: myform 1s;
+   
 }
 
 .form-container input[type=text], .form-container input[type=password] {
