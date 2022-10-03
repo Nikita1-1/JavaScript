@@ -11,4 +11,10 @@ These are some small projects i made useng JS.
  </ul>
  
  <h4>Pizza Menu</h4>
- This project..
+ In This project I created a menu with size of pizza and toppings, where you can choose topping that you like and it will give you a price for that pizza. 
+
+<h4> Tic Tac Toe<h4>
+Classic Tic Tac Toe game. You can play against the computer. As well I added sounds when you place you X in a square and when you Win or loose. 
+
+<h4> Calculator<h4>
+Calculator with interface. You can substruct, multiply, divide and add numbers. 
