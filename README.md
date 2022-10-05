@@ -5,9 +5,9 @@ These are some small projects i made useng JS.
 
 <h3> Projects</h3>
 <ul>
-  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/Pizza%20Project" style="_blank">Pizza Menu</a>
-  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/TicTacToe" style="_blank">Tic Tac Toe Game</a>
-  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/calculator" style="_blank">Calculator</a>
+  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/Pizza%20Project" target="_blank">Pizza Menu</a>
+  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/TicTacToe" target="_blank">Tic Tac Toe Game</a>
+  <li> <a href="https://github.com/Nikita1-1/JavaScript/tree/main/calculator" target="_blank">Calculator</a>
  </ul>
  
  <h4>Pizza Menu</h4>
