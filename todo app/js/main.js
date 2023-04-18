@@ -55,23 +55,35 @@ function show() {
     //this display a task to the list in the order that it is inputed 
     for (let i = 0; i < todos.length; i++) {
         // this also displays the task as a list and creates the button with the 'x'
-        html += '<li>' + todos[i] + '<button class = "remove" id="' + i + '">x</button></li>';
+        html += '<li>' + todos[i] + '</li>';
     };
-    let buttons = document.getElementsByClassName('remove');
-for (let i = 0; buttons.length;i++) {
-    buttons[i].addEventListener('click',remove);
+    let node = document.getElementsByTagName('li');
+    let i;
+    for (i = 0, i < node.length; i++;){
+        var span = document.CreateElement('SPAN');
+        var txt  = document.createTextNode("\u00D7");
+        span.className = 'close';
+        span.appendChild(txt);
+        node[i].appendChild(span);
+    }
 }
     html += '</ul>';
     // this display the task as a list 
     document.getElementById('todos').innerHTML = html;
-}
+
 
 // this displays the inputed task when the 'Add Item' buttom is clicked 
 document.getElementById('add').addEventListener('click', add);
 //this will keep inputs display permanently on the screen 
 show();
 
-
+var close = document.querySelector("\u00D7");
+for(i = 0; i < close.length; i++){
+    close[i].onClick = function() {
+        var div = this.parentElement;
+        div.pop(todo)
+    }
+}
 function remove() {
     let id = this.getAttribute('id');
     let todos = get_todos();

@@ -21,6 +21,7 @@ body{
     background-color: rgb(0, 4, 36);
     justify-content: center;
     overflow: hidden;
+    outline: none;
     border-radius: 20px;
 }
 
@@ -38,6 +39,7 @@ h2{
     animation: animate 4s linear infinite;
     width: 150px;
     height: 140%;
+    outline: none;
 }
 
 .container::after{
@@ -46,6 +48,7 @@ h2{
     inset:2px;
     background:  rgb(0, 4, 36);
     border-radius: 10px;
+    outline: none;
 }
 
 @keyframes animate{
